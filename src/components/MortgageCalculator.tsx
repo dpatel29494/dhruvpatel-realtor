@@ -57,22 +57,22 @@ const MortgageCalculator = () => {
   };
 
   return (
-    <section id="calculator" className="py-20 bg-background">
+    <section id="calculator" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-16">
+          <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-4">
             Mortgage Calculator
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base max-w-2xl mx-auto">
             Estimate your monthly mortgage payment and plan your budget
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          <Card className="border-2">
+          <Card className="border">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 font-playfair">
-                <Calculator className="w-6 h-6 text-accent" />
+              <CardTitle className="flex items-center gap-2 font-sans text-lg">
+                <Calculator className="w-5 h-5 text-primary" />
                 Loan Details
               </CardTitle>
             </CardHeader>
@@ -178,20 +178,20 @@ const MortgageCalculator = () => {
           </Card>
 
           <div className="space-y-6">
-            <Card className="bg-accent text-accent-foreground border-2 border-accent">
+            <Card className="bg-primary text-primary-foreground border border-primary">
               <CardContent className="pt-6">
                 <div className="text-center">
-                  <p className="text-lg mb-2 font-semibold">Estimated Monthly Payment</p>
-                  <p className="text-5xl font-bold font-playfair">
+                  <p className="text-base mb-2 font-semibold">Estimated Monthly Payment</p>
+                  <p className="text-4xl font-bold font-sans">
                     {formatCurrency(results.monthlyPayment)}
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2">
+            <Card className="border">
               <CardHeader>
-                <CardTitle className="font-playfair">Payment Breakdown</CardTitle>
+                <CardTitle className="font-sans text-lg">Payment Breakdown</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b">
@@ -215,9 +215,9 @@ const MortgageCalculator = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2">
+            <Card className="border">
               <CardHeader>
-                <CardTitle className="font-playfair">Loan Summary</CardTitle>
+                <CardTitle className="font-sans text-lg">Loan Summary</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex justify-between items-center py-2">

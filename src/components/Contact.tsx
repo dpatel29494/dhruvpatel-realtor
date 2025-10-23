@@ -24,13 +24,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-16">
+          <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-4">
             Let's Connect
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base max-w-2xl mx-auto">
             Ready to find your dream property? Get in touch today for a consultation
           </p>
         </div>
@@ -75,7 +75,7 @@ const Contact = () => {
                   className="min-h-[150px]"
                 />
               </div>
-              <Button type="submit" variant="hero" size="lg" className="w-full">
+              <Button type="submit" variant="default" size="lg" className="w-full bg-primary hover:bg-primary/90">
                 Send Message
               </Button>
             </form>
@@ -83,47 +83,47 @@ const Contact = () => {
           
           <div className="space-y-8">
             <div>
-              <h3 className="font-playfair text-2xl font-bold text-foreground mb-6">
+              <h3 className="font-sans text-xl font-bold text-foreground mb-6">
                 Contact Information
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-accent" />
+                  <div className="bg-primary/10 p-3 rounded">
+                    <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Phone</div>
-                    <div className="text-muted-foreground">(555) 123-4567</div>
+                    <div className="font-semibold text-foreground text-sm">Phone</div>
+                    <div className="text-muted-foreground text-sm">(555) 123-4567</div>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-accent" />
+                  <div className="bg-primary/10 p-3 rounded">
+                    <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Email</div>
-                    <div className="text-muted-foreground">contact@premierproperties.com</div>
+                    <div className="font-semibold text-foreground text-sm">Email</div>
+                    <div className="text-muted-foreground text-sm">contact@premierproperties.com</div>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent/10 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-accent" />
+                  <div className="bg-primary/10 p-3 rounded">
+                    <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Office</div>
-                    <div className="text-muted-foreground">123 Luxury Lane, Beverly Hills, CA 90210</div>
+                    <div className="font-semibold text-foreground text-sm">Office</div>
+                    <div className="text-muted-foreground text-sm">123 Luxury Lane, Beverly Hills, CA 90210</div>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-secondary p-6 rounded-lg border border-border">
-              <h4 className="font-playfair text-xl font-bold text-foreground mb-3">
+            <div className="bg-card p-6 rounded border border-border">
+              <h4 className="font-sans text-lg font-bold text-foreground mb-3">
                 Business Hours
               </h4>
-              <div className="space-y-2 text-muted-foreground">
+              <div className="space-y-2 text-muted-foreground text-sm">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
                   <span className="font-semibold">9:00 AM - 6:00 PM</span>

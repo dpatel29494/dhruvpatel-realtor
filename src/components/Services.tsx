@@ -25,13 +25,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-secondary">
+    <section id="services" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-16">
+          <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground mb-4">
             Comprehensive Services
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base max-w-2xl mx-auto">
             Full-service real estate solutions designed to exceed your expectations
           </p>
         </div>
@@ -42,15 +42,15 @@ const Services = () => {
             return (
               <div 
                 key={index}
-                className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow"
+                className="bg-card p-6 rounded border border-border hover:shadow-soft transition-all"
               >
-                <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-accent" />
+                <div className="bg-primary/10 w-14 h-14 rounded flex items-center justify-center mb-4">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-playfair text-xl font-bold text-foreground mb-3">
+                <h3 className="font-sans text-lg font-bold text-foreground mb-3">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   {service.description}
                 </p>
               </div>
