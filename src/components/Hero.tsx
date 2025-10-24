@@ -15,25 +15,31 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60" />
       </div>
+
+      {/* Animated overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-50" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="font-sans md:font-playfair text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 animate-fadeIn">
-          Your Dream Home Awaits
+        <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 animate-fade-in-up">
+          <span className="inline-block">Your Dream Home</span>
+          <span className="block bg-gradient-to-r from-white via-white to-primary/80 bg-clip-text text-transparent">
+            Awaits
+          </span>
         </h1>
-        <p className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeIn delay-100">
+        <p className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in backdrop-blur-sm bg-black/10 p-4 rounded-2xl">
           Expert guidance in real estate. Let's find the perfect property that matches your vision and lifestyle.
         </p>
         <Button
           onClick={scrollToContact}
           variant="default"
           size="lg"
-          className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 mx-auto animate-fadeIn delay-200 transition-transform hover:-translate-y-1"
+          className="group bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full shadow-2xl hover:shadow-glow flex items-center justify-center gap-2 mx-auto animate-scale-in transition-all duration-500 hover:scale-110 hover:-translate-y-2"
         >
           Schedule a Consultation
-          <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-2" />
         </Button>
       </div>
     </section>
