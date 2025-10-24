@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import AboutMe from "@/components/AboutMe";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import MortgageCalculator from "@/components/MortgageCalculator";
 import Services from "@/components/Services";
@@ -12,8 +12,8 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <About />
-      <FeaturedProperties />
+      <AboutMe />
+      {/* <FeaturedProperties /> */}
       <MortgageCalculator />
       <Services />
       <Contact />
