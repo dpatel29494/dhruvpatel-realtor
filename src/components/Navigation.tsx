@@ -1,4 +1,5 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -17,18 +18,18 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 border-b border-border/50 shadow-lg">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        
         {/* Logo / Name */}
-        <h1 className="text-2xl md:text-3xl font-sans font-bold text-foreground relative">
-          <span className="bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
+        <div className="flex flex-col leading-tight">
+          <span className="text-foreground font-bold text-lg md:text-xl">
             Dhruv Patel
           </span>
-          <span className="text-foreground"> | REALTOR®</span>
-        </h1>
+          <span className="text-red-600 font-semibold text-sm md:text-base tracking-wide">
+            REALTOR® | VP Realty Services
+          </span>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {/* About Me */}
           <button
             onClick={() => scrollToSection("AboutMe")}
             className="relative text-muted-foreground hover:text-primary transition-all duration-300 font-medium text-base group"
@@ -37,7 +38,6 @@ const Navigation = () => {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
           </button>
 
-          {/* Services */}
           <button
             onClick={() => scrollToSection("services")}
             className="relative text-muted-foreground hover:text-primary transition-all duration-300 font-medium text-base group"
@@ -46,7 +46,6 @@ const Navigation = () => {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
           </button>
 
-          {/* About Broker */}
           <a
             href="https://www.vprealtyservices.com/"
             target="_blank"
@@ -57,7 +56,7 @@ const Navigation = () => {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
           </a>
 
- {/* Calculator Dropdown */}
+          {/* Calculator Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="relative text-muted-foreground hover:text-primary transition-all duration-300 font-medium text-base group inline-flex items-center gap-1">
@@ -67,7 +66,6 @@ const Navigation = () => {
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background border-border/50 shadow-xl rounded-xl mt-2">
-              {/* Mortgage Calculator */}
               <DropdownMenuItem asChild className="cursor-pointer text-muted-foreground hover:text-primary">
                 <a
                   href="https://www.bankrate.com/mortgages/mortgage-calculator/"
@@ -79,7 +77,6 @@ const Navigation = () => {
                 </a>
               </DropdownMenuItem>
 
-              {/* Rent vs Buy Calculator */}
               <DropdownMenuItem asChild className="cursor-pointer text-muted-foreground hover:text-primary">
                 <a
                   href="https://www.bankrate.com/calculators/mortgages/rent-vs-buy-calculator/"
@@ -91,7 +88,6 @@ const Navigation = () => {
                 </a>
               </DropdownMenuItem>
 
-              {/* Property Tax Calculator */}
               <DropdownMenuItem asChild className="cursor-pointer text-muted-foreground hover:text-primary">
                 <a
                   href="https://smartasset.com/taxes/property-taxes"
