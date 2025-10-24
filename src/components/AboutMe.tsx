@@ -1,5 +1,6 @@
 "use client";
 import { Mail, Linkedin, Instagram, Facebook } from "lucide-react";
+import dpImage from "@/assets/dp.jpg";
 
 const AboutMe = () => {
   return (
@@ -69,7 +70,7 @@ const AboutMe = () => {
           <div className="flex flex-col items-center animate-fadeIn delay-200">
             <div className="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-border mb-4">
               <img
-                src="../assets/dp.jpg"
+                src={dpImage}
                 alt="Dhruv Patel - Realtor"
                 className="w-full h-full object-cover"
                 loading="lazy"
