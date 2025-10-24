@@ -52,7 +52,7 @@ const AboutMe = () => {
                 className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:shadow-glow hover:bg-primary/90 transition-all duration-300 h-12 font-medium hover:scale-105 hover:-translate-y-1"
               >
                 <Mail className="w-5 h-5" />
-                Contact Me
+                Email Me
               </a>
 
               {/* Read Reviews Button */}
@@ -106,7 +106,7 @@ const AboutMe = () => {
               </h3>
               <p className="text-muted-foreground text-sm">License #: 0840864</p>
               <p className="text-muted-foreground text-sm mt-1">
-                English / Gujarati / Hindi
+                Languages: English / Gujarati / Hindi
               </p>
 
               {/* IABS Link */}
