@@ -68,11 +68,11 @@ const AboutMe = () => {
 
           {/* Right: Photo & Info Section */}
           <div className="flex flex-col items-center animate-fadeIn delay-200">
-            <div className="w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-border mb-4">
+            <div className="w-80 h-80 md:w-[500px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg border border-border mb-4">
               <img
                 src={dpImage}
                 alt="Dhruv Patel - Realtor"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-white"
                 loading="lazy"
               />
             </div>
