@@ -1,6 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown, Phone, ExternalLink } from "lucide-react";
 
 const Navigation = () => {
   const scrollToSection = (id: string) => {
@@ -11,7 +17,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 border-b border-border/50 shadow-lg">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-
+        
         {/* Logo / Name */}
         <h1 className="text-2xl md:text-3xl font-sans font-bold text-foreground relative">
           <span className="bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
@@ -22,22 +28,84 @@ const Navigation = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {[
-            { label: "About Me", id: "AboutMe" },
-            { label: "Calculator", id: "calculator" },
-            { label: "Services", id: "services" },
-          ].map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="relative text-muted-foreground hover:text-primary transition-all duration-300 font-medium text-base group"
-            >
-              {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-            </button>
-          ))}
+          {/* About Me */}
+          <button
+            onClick={() => scrollToSection("AboutMe")}
+            className="relative text-muted-foreground hover:text-primary transition-all duration-300 font-medium text-base group"
+          >
+            About Me
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+          </button>
 
-          {/* Contact Button - Rounded */}
+          {/* Services */}
+          <button
+            onClick={() => scrollToSection("services")}
+            className="relative text-muted-foreground hover:text-primary transition-all duration-300 font-medium text-base group"
+          >
+            Services
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+          </button>
+
+          {/* About Broker */}
+          <a
+            href="https://www.vprealtyservices.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative text-muted-foreground hover:text-primary transition-all duration-300 font-medium text-base group"
+          >
+            About Broker
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+          </a>
+
+ {/* Calculator Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="relative text-muted-foreground hover:text-primary transition-all duration-300 font-medium text-base group inline-flex items-center gap-1">
+                Calculator
+                <ChevronDown className="w-4 h-4" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-background border-border/50 shadow-xl rounded-xl mt-2">
+              {/* Mortgage Calculator */}
+              <DropdownMenuItem asChild className="cursor-pointer text-muted-foreground hover:text-primary">
+                <a
+                  href="https://www.bankrate.com/mortgages/mortgage-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between w-full"
+                >
+                  Mortgage Calculator <ExternalLink className="w-4 h-4" />
+                </a>
+              </DropdownMenuItem>
+
+              {/* Rent vs Buy Calculator */}
+              <DropdownMenuItem asChild className="cursor-pointer text-muted-foreground hover:text-primary">
+                <a
+                  href="https://www.bankrate.com/calculators/mortgages/rent-vs-buy-calculator/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between w-full"
+                >
+                  Rent vs Buy <ExternalLink className="w-4 h-4" />
+                </a>
+              </DropdownMenuItem>
+
+              {/* Property Tax Calculator */}
+              <DropdownMenuItem asChild className="cursor-pointer text-muted-foreground hover:text-primary">
+                <a
+                  href="https://smartasset.com/taxes/property-taxes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between w-full"
+                >
+                  Property Tax Calculator <ExternalLink className="w-4 h-4" />
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {/* Contact Button */}
           <Button
             onClick={() => scrollToSection("contact")}
             variant="default"
