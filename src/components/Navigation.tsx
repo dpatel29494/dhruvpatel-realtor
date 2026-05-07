@@ -102,6 +102,8 @@ const Navigation = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
+          <ResourcesMenu />
+
           {/* Contact Button */}
           <Button
             onClick={() => scrollToSection("contact")}
