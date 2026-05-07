@@ -40,6 +40,7 @@ const Hero = () => {
             className="group bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full shadow-2xl hover:shadow-glow flex items-center justify-center gap-2 transition-all duration-500 hover:scale-110 hover:-translate-y-2"
           >
             Schedule a Consultation
+            <a href="https://calendar.app.google/Nissh3X3oZibY2xX7"> </a>
             <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-2" />
           </Button>
           <Button
