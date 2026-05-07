@@ -31,37 +31,45 @@ const RESOURCES: Record<
   { title: string; description: string; sections: { heading: string; items: string[] }[] }
 > = {
   buyer: {
-    title: "Home Buyer Checklist",
-    description: "A step-by-step guide to buying your next home.",
+    title: "Let's Get Started on Your Home Search 🏡",
+    description:
+      "I'll be with you every step of the way to make the process smooth and stress-free.",
     sections: [
       {
-        heading: "Before You Shop",
-        items: [
-          "Review your credit report and improve your score",
-          "Determine your budget and monthly payment comfort zone",
-          "Save for down payment, closing costs, and reserves",
-          "Get pre-approved with a trusted lender",
-          "Make a list of must-haves vs. nice-to-haves",
-        ],
+        heading: "1. Preparation & Planning",
+        items: ["We'll start by reviewing your finances, setting a budget, and identifying your home goals."],
       },
       {
-        heading: "While Shopping",
-        items: [
-          "Tour homes with your Realtor",
-          "Research neighborhoods, schools, and commute times",
-          "Compare property taxes and HOA fees",
-          "Check recent comparable sales",
-        ],
+        heading: "2. Mortgage Pre-Approval",
+        items: ["You'll connect with a lender, submit documents, and get pre-approved so we know your price range."],
       },
       {
-        heading: "Under Contract",
-        items: [
-          "Submit earnest money",
-          "Order home inspection and review report",
-          "Complete appraisal through your lender",
-          "Finalize loan and homeowner's insurance",
-          "Schedule final walk-through before closing",
-        ],
+        heading: "3. Home Search",
+        items: ["We'll explore neighborhoods, tour homes, and narrow down your top choices based on your needs."],
+      },
+      {
+        heading: "4. Making an Offer",
+        items: ["When you find the right home, I'll help you submit a strong offer and negotiate the best terms."],
+      },
+      {
+        heading: "5. Under Contract (Escrow Period)",
+        items: ["Once accepted, we'll schedule inspections, submit earnest money, and handle any repair negotiations."],
+      },
+      {
+        heading: "6. Financing & Appraisal",
+        items: ["Your lender will finalize your loan and order an appraisal to confirm the home's value."],
+      },
+      {
+        heading: "7. Final Approval & Closing Prep",
+        items: ["You'll receive final loan approval, review your closing details, and complete a final walkthrough."],
+      },
+      {
+        heading: "8. Closing Day",
+        items: ["You'll sign the paperwork, finalize everything, and officially become a homeowner!"],
+      },
+      {
+        heading: "9. After Closing",
+        items: ["Time to move in, set up utilities, and make your new house feel like home."],
       },
     ],
   },
