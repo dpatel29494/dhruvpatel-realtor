@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown, Phone, ExternalLink } from "lucide-react";
+import ResourcesMenu from "./ResourcesMenu";
 
 const Navigation = () => {
   const scrollToSection = (id: string) => {
@@ -100,6 +101,8 @@ const Navigation = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+
+          <ResourcesMenu />
 
           {/* Contact Button */}
           <Button
