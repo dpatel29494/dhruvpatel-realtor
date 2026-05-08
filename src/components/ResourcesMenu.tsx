@@ -199,11 +199,19 @@ const ResourcesMenu = () => {
             Checklists
           </DropdownMenuLabel>
           
-          <DropdownMenuItem onSelect={() => setOpen("buyer")} className="cursor-pointer gap-2">
-            <ClipboardList className="w-4 h-4 text-primary" /> Home Buyer Checklist
+          {/* UPDATED: Home Buyer Checklist Link */}
+          <DropdownMenuItem className="cursor-pointer gap-2" asChild>
+            <a 
+              href="/dhruvpatel-realtor/buyer-checklist.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center w-full"
+            >
+              <FileUp className="w-4 h-4 text-primary" /> Home Buyer Checklist (PDF)
+            </a>
           </DropdownMenuItem>
 
-          {/* UPDATED: Opens in new tab by removing 'download' and using target="_blank" */}
+          {/* Home Seller Checklist Link */}
           <DropdownMenuItem className="cursor-pointer gap-2" asChild>
             <a 
               href="/dhruvpatel-realtor/seller-checklist.pdf" 
