@@ -10,7 +10,7 @@ export default function Checklist() {
         className="w-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center gap-2 py-6 rounded-xl transition-all hover:scale-[1.02]"
       >
         <a 
-          href="/dhruvpatel-realtor/seller-checklist.pdf" 
+          href="/seller-checklist.pdf" 
           download="Dhruv-Patel-Seller-Checklist.pdf"
           target="_blank"
           rel="noopener noreferrer"
