@@ -4,10 +4,6 @@ import { ArrowRight, Search } from "lucide-react";
 import heroImage from "@/assets/hero-home.jpg";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Background Image */}
@@ -34,14 +30,19 @@ const Hero = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center animate-scale-in">
           <Button
-            onClick={scrollToContact}
+            asChild
             variant="default"
             size="lg"
             className="group bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full shadow-2xl hover:shadow-glow flex items-center justify-center gap-2 transition-all duration-500 hover:scale-110 hover:-translate-y-2"
           >
-            Schedule a Consultation
-            <a href="https://calendar.app.google/h7HSxs6CpH3zgtPe9"> </a>
-            <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-2" />
+            <a 
+              href="https://calendar.app.google/1jwTSAZ8KXcgHVYq7" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Schedule a Consultation
+              <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-2" />
+            </a>
           </Button>
           <Button
             asChild
