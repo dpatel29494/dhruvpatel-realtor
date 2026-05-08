@@ -17,11 +17,10 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChevronDown, ClipboardList, FileText, CheckCircle2 } from "lucide-react";
+import { ChevronDown, ClipboardList, FileText, CheckCircle2, Download } from "lucide-react";
 
 type ResourceKey =
   | "buyer"
-  | "seller"
   | "firstTime"
   | "moving"
   | "documents";
@@ -70,41 +69,6 @@ const RESOURCES: Record<
       {
         heading: "9. After Closing",
         items: ["Time to move in, set up utilities, and make your new house feel like home."],
-      },
-    ],
-  },
-  seller: {
-    title: "Home Seller Checklist",
-    description: "Maximize your home's value and sell with confidence.",
-    sections: [
-      {
-        heading: "Prepare to List",
-        items: [
-          "Meet with your Realtor for a market analysis",
-          "Declutter and depersonalize each room",
-          "Complete minor repairs and touch-up paint",
-          "Deep clean carpets, windows, and exterior",
-          "Stage rooms to highlight space and light",
-        ],
-      },
-      {
-        heading: "Marketing & Showings",
-        items: [
-          "Professional photos and virtual tour",
-          "MLS listing and online syndication",
-          "Open houses and private showings",
-          "Review and negotiate offers",
-        ],
-      },
-      {
-        heading: "Closing",
-        items: [
-          "Cooperate with buyer's inspection and appraisal",
-          "Negotiate any repair requests",
-          "Gather warranties, manuals, and keys",
-          "Schedule movers and utility transfers",
-          "Sign closing documents",
-        ],
       },
     ],
   },
@@ -234,19 +198,32 @@ const ResourcesMenu = () => {
           <DropdownMenuLabel className="text-xs uppercase tracking-wider text-muted-foreground">
             Checklists
           </DropdownMenuLabel>
+          
           <DropdownMenuItem onSelect={() => setOpen("buyer")} className="cursor-pointer gap-2">
             <ClipboardList className="w-4 h-4 text-primary" /> Home Buyer Checklist
           </DropdownMenuItem>
-          <DropdownMenuItem onSelect={() => setOpen("seller")} className="cursor-pointer gap-2">
-            <ClipboardList className="w-4 h-4 text-primary" /> Home Seller Checklist
+
+          {/* UPDATED: Directly downloads the PDF instead of opening a dialog */}
+          <DropdownMenuItem className="cursor-pointer gap-2" asChild>
+            <a 
+              href="./seller-checklist.pdf" 
+              download="Dhruv-Patel-Seller-Checklist.pdf"
+              className="flex items-center w-full"
+            >
+              <Download className="w-4 h-4 text-primary" /> Home Seller Checklist (PDF)
+            </a>
           </DropdownMenuItem>
+
           <DropdownMenuItem onSelect={() => setOpen("firstTime")} className="cursor-pointer gap-2">
             <ClipboardList className="w-4 h-4 text-primary" /> First-Time Buyer Checklist
           </DropdownMenuItem>
+          
           <DropdownMenuItem onSelect={() => setOpen("moving")} className="cursor-pointer gap-2">
             <ClipboardList className="w-4 h-4 text-primary" /> Moving / Closing Checklist
           </DropdownMenuItem>
+          
           <DropdownMenuSeparator />
+          
           <DropdownMenuLabel className="text-xs uppercase tracking-wider text-muted-foreground">
             Documents
           </DropdownMenuLabel>
