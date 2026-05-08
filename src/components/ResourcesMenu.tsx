@@ -206,7 +206,7 @@ const ResourcesMenu = () => {
           {/* UPDATED: Opens in new tab by removing 'download' and using target="_blank" */}
           <DropdownMenuItem className="cursor-pointer gap-2" asChild>
             <a 
-              href="./seller-checklist.pdf" 
+              href="/dhruvpatel-realtor/seller-checklist.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center w-full"
