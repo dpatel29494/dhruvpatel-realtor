@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Checklist from "./components/checklist";
 
 const queryClient = new QueryClient();
 
@@ -17,12 +16,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename="/dhruvpatel-realtor">
         <Routes>
-          <Route path="/" element={
-            <>
-              <Index />
-              <Checklist /> {/* This is the line you add! */}
-            </>
-          } />
+          <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
