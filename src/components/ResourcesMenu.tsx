@@ -203,10 +203,12 @@ const ResourcesMenu = () => {
             <ClipboardList className="w-4 h-4 text-primary" /> Home Buyer Checklist
           </DropdownMenuItem>
 
-          {/* UPDATED: Directly downloads the PDF instead of opening a dialog */}
+          {/* UPDATED: Opens in a new tab AND allows download */}
           <DropdownMenuItem className="cursor-pointer gap-2" asChild>
             <a 
               href="./seller-checklist.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
               download="Dhruv-Patel-Seller-Checklist.pdf"
               className="flex items-center w-full"
             >
