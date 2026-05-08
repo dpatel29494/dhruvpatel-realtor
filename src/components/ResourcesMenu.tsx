@@ -17,7 +17,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChevronDown, ClipboardList, FileText, CheckCircle2, Download } from "lucide-react";
+import { ChevronDown, ClipboardList, FileText, CheckCircle2, FileUp } from "lucide-react";
 
 type ResourceKey =
   | "buyer"
@@ -203,16 +203,15 @@ const ResourcesMenu = () => {
             <ClipboardList className="w-4 h-4 text-primary" /> Home Buyer Checklist
           </DropdownMenuItem>
 
-          {/* UPDATED: Opens in a new tab AND allows download */}
+          {/* UPDATED: Opens in new tab by removing 'download' and using target="_blank" */}
           <DropdownMenuItem className="cursor-pointer gap-2" asChild>
             <a 
               href="./seller-checklist.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              download="Dhruv-Patel-Seller-Checklist.pdf"
               className="flex items-center w-full"
             >
-              <Download className="w-4 h-4 text-primary" /> Home Seller Checklist (PDF)
+              <FileUp className="w-4 h-4 text-primary" /> Home Seller Checklist (PDF)
             </a>
           </DropdownMenuItem>
 
