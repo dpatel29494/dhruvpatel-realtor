@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  base: "/", // Use an absolute path
+  base: "./", // Use relative paths
   plugins: [react()],
   resolve: {
     alias: {
@@ -12,11 +12,7 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined, // Keeps the bundle simple
-      },
-    },
-  },
+    assetsDir: "assets",
+    emptyOutDir: true
+  }
 });
